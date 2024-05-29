@@ -1,0 +1,13 @@
+syntax = "proto3";
+option go_package = "github.com/gherlein/time-services/time-services-pb";
+
+service TimeService {
+  rpc GetTime (TimeRequest) returns (TimeResponse);
+}
+
+message TimeRequest {}
+
+message TimeResponse {
+  string current_time = 1;
+}
+
